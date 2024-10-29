@@ -1,49 +1,68 @@
 .header {
-background-image: url(../assets/Background.png);    
-padding: 10px 20px; /* Padding for the header */
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    align-items: center; /* Center items vertically */
-  }
-  
-  .navbar-left {
-    flex: 1; /* Allow the logo to take available space */
-  }
-  
-  .navbar-center {
-    display: flex;
-    flex-grow: 1; /* Allow center links to take available space */
-  }
-  
-  .navbar-center a {
-    margin: 0 15px; /* Space between links */
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Text color */
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center; /* Center items vertically */
-  }
-  
-  .navbar-user-icon {
-    width: 30px; /* Adjust size as necessary */
-    height: 30px; /* Adjust size as necessary */
-    margin-right: 10px; /* Space between icon and button */
-  }
-  
-  .navbar-button {
-    background-color: #007bff; /* Button color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    padding: 10px 15px; /* Padding for the button */
-    cursor: pointer; /* Change cursor on hover */
-  }
-  
-  .navbar-button:hover {
-    background-color: #0056b3; /* Button color on hover */
-  }
-  
+  background-color: transparent; /* Ensure the path is correct */
+  padding: 10px 20px; /* Padding for the header */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-left {
+  flex: 1; /* Allow the logo to take available space */
+}
+
+.navbar-center {
+  display: flex;
+  flex-grow: 1; /* Allow center links to take available space */
+}
+
+.navbar-center a {
+  margin: 0 15px; /* Space between links */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Normal text color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.navbar-center a:hover {
+  color: #007bff; /* Change text color on hover */
+  transform: scale(1.05); /* Slightly scale up the link on hover */
+}
+
+/* Optional: Add an underline effect */
+.navbar-center a:hover::after {
+  content: ''; /* Add a pseudo-element */
+  display: block;
+  height: 2px; /* Height of the underline */
+  width: 100%; /* Full width */
+  background-color: #007bff; /* Color of the underline */
+  margin-top: 5px; /* Space between text and underline */
+  transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-user-icon {
+  width: 30px; /* Adjust size as necessary */
+  height: 30px; /* Adjust size as necessary */
+  margin-right: 10px; /* Space between icon and button */
+}
+
+.navbar-button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for the button */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.navbar-button:hover {
+  background-color: #0056b3; /* Button color on hover */
+}

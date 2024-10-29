@@ -1,7 +1,6 @@
 .hero-section {
     display: flex;
     align-items: center;
-    background-image: url(../assets/Background.png);
     padding: 20px;
   }
   
@@ -20,7 +19,7 @@
   }
   
   .hero-image {
-    width: 40%;
+    width: 100%;
     margin-left: 20px;
     border-radius: 10px;
   }
