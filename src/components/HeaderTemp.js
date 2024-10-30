@@ -11,7 +11,7 @@ function Header() {
   const handleScroll = () => {
     const offset = window.scrollY; // Dapatkan posisi scroll
     if (offset > 50) { // Atur threshold untuk sticky
-      setIsSticky(true);
+      setIsSticky(true); 
     } else {
       setIsSticky(false);
     }

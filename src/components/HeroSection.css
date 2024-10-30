@@ -30,7 +30,7 @@
 .hero-image {
   max-width: 300px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 8px; 
 }
 
 /* Larger screens: display items in a row */
