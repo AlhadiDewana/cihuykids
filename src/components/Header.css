@@ -1,68 +1,82 @@
+/* Header.css */
+
 .header {
-  background-color: transparent; /* Ensure the path is correct */
-  padding: 10px 20px; /* Padding for the header */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px 20px;
+  position: sticky; /* This makes it sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensures it stays on top */
+  background-color: transparent; /* Initial background color (transparent or your preferred color) */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.header.sticky {
+  background-color: #fff; /* Background color when sticky */
 }
 
 .navbar {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center; /* Center items vertically */
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar-left {
-  flex: 1; /* Allow the logo to take available space */
+.navbar-left .navbar-logo {
+  width: 100%;
 }
 
 .navbar-center {
   display: flex;
-  flex-grow: 1; /* Allow center links to take available space */
+  gap: 20px; /* Space between links */
 }
 
 .navbar-center a {
-  margin: 0 15px; /* Space between links */
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Normal text color */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .navbar-center a:hover {
-  color: #007bff; /* Change text color on hover */
-  transform: scale(1.05); /* Slightly scale up the link on hover */
-}
-
-/* Optional: Add an underline effect */
-.navbar-center a:hover::after {
-  content: ''; /* Add a pseudo-element */
-  display: block;
-  height: 2px; /* Height of the underline */
-  width: 100%; /* Full width */
-  background-color: #007bff; /* Color of the underline */
-  margin-top: 5px; /* Space between text and underline */
-  transition: width 0.3s ease; /* Smooth transition for underline */
+  color: #007bff; /* Hover color for links */
 }
 
 .navbar-right {
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
+  gap: 10px; /* Space between icon and button */
 }
 
 .navbar-user-icon {
-  width: 30px; /* Adjust size as necessary */
-  height: 30px; /* Adjust size as necessary */
-  margin-right: 10px; /* Space between icon and button */
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-button {
-  background-color: #007bff; /* Button color */
-  color: white; /* Button text color */
-  border: none; /* Remove border */
-  padding: 10px 15px; /* Padding for the button */
-  cursor: pointer; /* Change cursor on hover */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .navbar-button:hover {
-  background-color: #0056b3; /* Button color on hover */
+  background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none; /* Hide links on small screens */
+  }
+  .navbar-right {
+    gap: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-right .navbar-user-icon {
+    display: block; /* Show icon only on larger screens */
+  }
 }
