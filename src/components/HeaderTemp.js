@@ -4,6 +4,7 @@ import logo from '../assets/icon.png'; // Logo normal
 import stickyLogo from '../assets/logo.png'; // Logo saat sticky
 import userIcon from '../assets/profile-icon.png'; // Ikon normal
 import userIconSticky from '../assets/profile-icon-sticky.png'; // Ikon saat sticky
+import { BiColorFill } from 'react-icons/bi';
 
 function Header() {
   const [isSticky, setIsSticky] = useState(false); // State untuk menentukan apakah header sticky
@@ -45,8 +46,8 @@ function Header() {
             alt="User Icon" 
             className="navbar-user-icon" 
           />
-          <button className="navbar-button">
-            {isSticky ? 'Lihat Sekarang' : 'Jelajahi'} {/* Ganti teks tombol berdasarkan state */}
+          <button className={`navbar-button ${isSticky ? 'sticky-button' : ''}`}>
+            Jelajahi {/* Ganti teks tombol berdasarkan state */}
           </button>
         </div>
       </nav>

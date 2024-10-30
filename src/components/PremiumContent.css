@@ -3,3 +3,9 @@
 background-image: url(../assets/cover.png); 
  }
   
+ .content{
+    background-image: url(../assets/bg-home-2.png); 
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+ }

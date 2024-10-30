@@ -7,11 +7,13 @@ import PremiumContent from './components/PremiumContent';
 
 function App() {
   return (
-    <div className="App">
+    <><div className="App">
       <Header />
       <HeroSection />
-      <PremiumContent />
     </div>
+    <div>
+        <PremiumContent />
+      </div></>
   );
 }
 

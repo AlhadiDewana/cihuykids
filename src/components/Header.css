@@ -38,6 +38,10 @@
   transition: color 0.3s;
 }
 
+.header.sticky .navbar-center a {
+  color: #000; /* Warna hitam saat sticky */
+}
+
 .navbar-center a:hover {
   color: #007bff; /* Hover color for links */
 }
@@ -66,6 +70,10 @@
 .navbar-button:hover {
   background-color: #ef0000; /* Background color on hover */
   color: #fff; /* Text color on hover */
+}
+.sticky-button {
+  background-color: red; /* color when sticky */
+  color: #fff;
 }
 
 /* Responsive styling */
