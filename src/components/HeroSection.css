@@ -17,13 +17,13 @@
 .hero-content h2 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #fff;
   margin-bottom: 16px;
 }
 
 .hero-content p {
-  font-size: 1.125rem;
-  color: #555;
+  font-size: 0.5rem;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -46,7 +46,7 @@
   }
 
   .hero-content p {
-    font-size: 1.25rem;
+    font-size: 0.5rem;
   }
 
   .hero-image {
@@ -58,6 +58,7 @@
   .hero-section {
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: center;
   }
 
   .hero-content h2 {
@@ -65,10 +66,10 @@
   }
 
   .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .hero-image {
-    max-width: 500px;
+    max-width: 650px;
   }
 }

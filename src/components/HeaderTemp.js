@@ -1,14 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
-import logo from '../assets/icon.png';
-import userIcon from '../assets/profile-icon.png';
+import logo from '../assets/icon.png'; // Logo normal
+import stickyLogo from '../assets/logo.png'; // Logo saat sticky
+import userIcon from '../assets/profile-icon.png'; // Ikon normal
+import userIconSticky from '../assets/profile-icon-sticky.png'; // Ikon saat sticky
 
 function Header() {
+  const [isSticky, setIsSticky] = useState(false); // State untuk menentukan apakah header sticky
+
+  const handleScroll = () => {
+    const offset = window.scrollY; // Dapatkan posisi scroll
+    if (offset > 50) { // Atur threshold untuk sticky
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll); // Tambahkan event listener scroll
+    return () => {
+      window.removeEventListener('scroll', handleScroll); // Bersihkan listener saat komponen di-unmount
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <nav className="navbar">
         <div className="navbar-left">
-          <img src={logo} alt="Cihuy Kids Logo" className="navbar-logo" />
+          <img 
+            src={isSticky ? stickyLogo : logo} // Ganti logo berdasarkan state isSticky
+            alt="Cihuy Kids Logo" 
+            className="navbar-logo" 
+          />
         </div>
         <div className="navbar-center">
           <a href="#home">Selamat Datang</a>
@@ -16,8 +40,14 @@ function Header() {
           <a href="#access">Apa saja yang Bisa Diakses?</a>
         </div>
         <div className="navbar-right">
-          <img src={userIcon} alt="User Icon" className="navbar-user-icon" />
-          <button className="navbar-button">Jelajahi</button>
+          <img 
+            src={isSticky ? userIconSticky : userIcon} // Ganti ikon berdasarkan state isSticky
+            alt="User Icon" 
+            className="navbar-user-icon" 
+          />
+          <button className="navbar-button">
+            {isSticky ? 'Lihat Sekarang' : 'Jelajahi'} {/* Ganti teks tombol berdasarkan state */}
+          </button>
         </div>
       </nav>
     </header>

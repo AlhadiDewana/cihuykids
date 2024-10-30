@@ -3,15 +3,17 @@
 .header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   padding: 10px 20px;
-  position: sticky; /* This makes it sticky */
+  position: sticky; /* Makes the header sticky */
   top: 0; /* Stick to the top */
   z-index: 1000; /* Ensures it stays on top */
-  background-color: transparent; /* Initial background color (transparent or your preferred color) */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  background-color: transparent; /* Initial background color */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
 }
 
 .header.sticky {
   background-color: #fff; /* Background color when sticky */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* More prominent shadow when sticky */
+  color: black;
 }
 
 .navbar {
@@ -31,7 +33,7 @@
 
 .navbar-center a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* Initial link color */
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -47,22 +49,23 @@
 }
 
 .navbar-user-icon {
-  width: 30px;
-  height: 30px;
+  width: 30px; /* Set a specific width for user icon */
+  height: 30px; /* Set a specific height for user icon */
 }
 
 .navbar-button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
+  color: #007bff;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
 }
 
 .navbar-button:hover {
-  background-color: #0056b3;
+  background-color: #ef0000; /* Background color on hover */
+  color: #fff; /* Text color on hover */
 }
 
 /* Responsive styling */
