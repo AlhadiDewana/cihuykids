@@ -17,7 +17,7 @@ function PremiumContent() {
 
       {/* Main Content Section */}
       <div className='content'>
-      <div className="flex flex-col md:flex-row justify-around items-center">
+        <div className="flex flex-col md:flex-row justify-around items-center">
         {/* Pricing Section */}
         <div className="text-white p-6 max-w-xs text-start mb-6 md:mb-0 mt-14">
           <h3 className="text-xl font-semibold">Hanya <br/> Rp.70.000,00</h3>
@@ -35,18 +35,17 @@ function PremiumContent() {
         </div>
 
         {/* Card Carousel Section */}
-        <div className="flex space-x-4 overflow-auto">
+        <div className="preview flex space-x-4 overflow-auto">
           <img src="https://via.placeholder.com/150" alt="Content 1" className="rounded-lg shadow-lg" />
           <img src="https://via.placeholder.com/150" alt="Content 2" className="rounded-lg shadow-lg" />
           <img src="https://via.placeholder.com/150" alt="Content 3" className="rounded-lg shadow-lg" />
           <img src="https://via.placeholder.com/150" alt="Content 4" className="rounded-lg shadow-lg" />
           <img src="https://via.placeholder.com/150" alt="Content 4" className="rounded-lg shadow-lg" />
-          
         </div>
       </div>
       </div>
-    </div>
-    </div>
+  </div>
+</div>
   );
 }
 

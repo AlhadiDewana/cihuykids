@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import './App.css';
 import './tailwind.css'; 
 import PremiumContent from './components/PremiumContent';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     </div>
     <div>
         <PremiumContent />
+        <Footer/>
       </div></>
   );
 }
