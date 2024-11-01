@@ -35,11 +35,6 @@ function Header() {
             className="navbar-logo" 
           />
         </div>
-        <div className="navbar-center">
-          <a href="#home">Selamat Datang</a>
-          <a href="#importance">Kenapa Konten Sesuai Usia itu Penting?</a>
-          <a href="#access">Apa saja yang Bisa Diakses?</a>
-        </div>
         <div className="navbar-right">
           <img 
             src={isSticky ? userIconSticky : userIcon} // Ganti ikon berdasarkan state isSticky
@@ -49,6 +44,13 @@ function Header() {
           <button className={`navbar-button ${isSticky ? 'sticky-button' : ''}`}>
             Jelajahi {/* Ganti teks tombol berdasarkan state */}
           </button>
+        </div>
+      </nav>
+      <nav>
+      <div className="navbar-center">
+          <a href="#home">Selamat Datang</a>
+          <a href="#importance">Kenapa Konten Sesuai Usia itu Penting?</a>
+          <a href="#access">Apa saja yang Bisa Diakses?</a>
         </div>
       </nav>
     </header>

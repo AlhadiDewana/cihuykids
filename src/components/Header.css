@@ -28,7 +28,10 @@
 
 .navbar-center {
   display: flex;
-  gap: 20px; /* Space between links */
+  gap: 50px; /* Space between links */
+  justify-content: start;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .navbar-center a {
@@ -36,14 +39,15 @@
   color: #fff; /* Initial link color */
   font-weight: 500;
   transition: color 0.3s;
+  font-size: larger;
 }
 
 .header.sticky .navbar-center a {
-  color: #000; /* Warna hitam saat sticky */
+  color: #6095FF; /* Warna hitam saat sticky */
 }
 
 .navbar-center a:hover {
-  color: #007bff; /* Hover color for links */
+  color: black; /* Hover color for links */
 }
 
 .navbar-right {
@@ -53,8 +57,7 @@
 }
 
 .navbar-user-icon {
-  width: 30px; /* Set a specific width for user icon */
-  height: 30px; /* Set a specific height for user icon */
+  width: 100%; /* Set a specific width for user icon */
 }
 
 .navbar-button {
