@@ -3,7 +3,7 @@ import '../components/Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="footer text-white py-8">
+    <footer className="footer text-white py-8 mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
