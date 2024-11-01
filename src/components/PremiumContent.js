@@ -5,7 +5,7 @@ import './PremiumContent.css';
 
 function PremiumContent() {
   return (
-    <div className='premium mt-8'>
+    <div className='premium py-8 mt-8'>
       <div className="relative overflow-hidden">
       {/* Header Section */}
       <div className="text-center mb-8">

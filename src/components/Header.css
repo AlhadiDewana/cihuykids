@@ -50,6 +50,10 @@
   color: black; /* Hover color for links */
 }
 
+.header.sticky .navbar-center a:hover {
+  color: black; /* Warna hitam saat sticky */
+}
+
 .navbar-right {
   display: flex;
   align-items: center;
